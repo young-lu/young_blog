@@ -1,0 +1,33 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>young.blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+        <meta property="og:url" content="https://github.com/young-lu">
+        <meta property="og:title" content="Connor Lu">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Computer science student at Georgetown University. JP Morgan TAP Intern ">
+        <meta property="og:image" content="https://andrewyang.xyz/images/profile.jpg">
+    </head>
+<body>
+    <div class = "page-header">
+        <h1>young blog</h1>
+        {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        {% endif %}
+        <h5 style='float:right'>Today's Date: {{ date }}</h5>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
