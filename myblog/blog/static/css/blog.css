@@ -1,8 +1,65 @@
 h1 a {
-    color: #FCA205;
-    font-family: 'Lobster';
+    color: pink;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+h1 a:hover {
+	color: lavenderblush;
+}
+
+h1 {
+	font-family: 'Montserrat', 'sans-serif';
 }
 
 body {
     padding: 15px;
+}
+
+#header {
+	/*padding-left: 100px;*/
+	margin-left: 12%;
+	border-bottom: solid  4px;
+}
+
+#body {
+	margin-left: 12%;
+}
+
+.lead div{
+	float: left;
+	margin: 1px;
+	display: block;
+}
+
+.grow {
+	transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+	transform: scale(1.3);
+}
+
+
+#sidenav  {
+	width: 12%;
+	height: 100%;
+	position: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	background-color: pink;
+	border-right: 5px solid black;
+}
+
+.content-container div {
+	/*display: inline-block;*/
+	/*border-color: black;*/
+}
+
+.logo {
+	border-radius: 100%;
+	border: 1px solid black;
+	width: 50%;
+	margin-top: 25%;
+	margin-left: 25%;
 }

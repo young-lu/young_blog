@@ -1,8 +1,8 @@
 {% extends 'blog/base.html' %}
 {% block content %}
   	{% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
+    <div class = "lead">
+        <p>published: {{ post.published_date.month }}/{{ post.published_date.day }}/{{ post.published_date.year }}</p>
         <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
         <!-- <p>{{ post.text|linebreaksbr }}</p> -->
     </div>
