@@ -1,6 +1,111 @@
 {% extends 'blog/base.html' %}
 {% block content %}
 
+<div class="cv_header">
+	<p>connorylu@gmail.com</p>
+</div>
 
+<div class="cv_block">
+	<h3>Education</h3>
+	<div class="container">
+		<div class= "left-float">Georgetown University</div>
+		<div class= "date">Washington, DC</div>
+		<div class= "left-float">Georgetown College, Bachelor of Science in Computer Science</div>
+	</div>
+		<div>
+			<div class= "left-float">Georgetown College, Bachelor of Arts in Economics </div>
+			<div class= "date">Expected: May 2019</div>
+		</div>
+	<ul>
+		<li>GPA: 3.56; Computer Science GPA: 3.47</li>
+		<li>Fall 2015/Spring 2016 Dean’s List, Spring 2016/Fall 2017 Second Honors</li>
+		<li>Coursework: Data Structures, Advanced Programming, Databases (mySQL), Algorithms, Network Security, Hardware, Math Methods for Computer Science, Linear Algebra, Artificial Intelligence (seminar)</li>
+	</ul>
+</div>
+
+<div class="cv_block">
+	<h3>Experience</h3>
+		<div class="container">
+			<div class= "left-float">Students of Georgetown, Inc. (The Corp) </div>
+			<div class= "date">September 2015-present</div>
+		</div>
+	<ul>
+		<li>World’s largest entirely student-run non-profit organization</li>
+	</ul>
+</div>
+
+<div>
+		<div class="container">
+			<div class= "left-float">Software Developer, Information Technologies (The Corp) </div>
+			<div class= "date">September 2016-present</div>
+		</div>
+	<ul>
+		<li>Develop and maintain web applications in support of 400+ employee company </li>
+		<li>Responded to employee requests to improve company website design with HTML and CSS </li>
+		<li>Modified web application design to improve communication between storefronts and IT team </li>
+	</ul>
+		<div class="container">
+			<div class= "left-float">Manager of Operations, More Uncommon Grounds (The Corp) </div>
+			<div class= "date">January–December 2016</div>
+		</div>
+	<ul>
+		<li>Active member of two-person operations management team for coffee shop with 30 employees</li>
+		<li>Organized and participated in training of student baristas to maintain quality of store products</li>
+		<li>Oversaw maintenance and repair of machinery vital to store operations </li>
+		<li>Implemented recycling system for responsible disposal of store wast</li>
+	</ul>
+		<div class="container">
+			<div class= "left-float">Technical Analyst Program Intern, JP Morgan Chase </div>
+			<div class= "date">June-August 2018</div>
+		</div>
+	<ul>
+		<li>Asset and Wealth Management technical intern in Jersey CIty, New Jersey</li>
+		<li>Worked with development team in Agile style project with 2 week sprints</li>
+		<li>Coordinated with team members in Jersey City, UK, and India to develop features/bug fixes daily</li>
+	</ul>
+</div>
+
+<div class="cv_block">
+	<h3>Projects</h3>
+		<div class="container">
+			<div class= "left-float">Dyson </div>
+			<div class= "date">August 2017</div>
+		</div>
+	<ul>
+		<li>Worked alongside department manager to build website for the submission and review of online applications using Python framework Django</li>
+	</ul>
+		<div class="container">
+			<div class= "left-float">Olympus </div>
+			<div class= "date">September 2017</div>
+		</div>
+	<ul>
+		<li>Implemented automated email protocol for internal website used by all Corp employees using Django </li>
+	</ul>
+		<div class="container">
+			<div class= "left-float">JP Morgan Chase Web Application </div>
+			<div class= "date">June-August 2018</div>
+		</div>
+	<ul>
+		<li>Part of team improving a React-based web app designed to market investment funds pulling data from multiple endpoints </li>
+	</ul>
+</div>
+
+<div class="cv_block">
+	<h3>Interests</h3>
+	<ul>
+		<li>Hobbies: cooking, standup comedy, photography, running, fishing, and intramural basketball, flag football, and soccer</li>
+	</ul>
+</div>
+
+<div class="cv_block">
+	<h3>Skills</h3>
+	<ul>
+		<li>Coding: C++,  React.js, Python, Java, HTML and CSS, JavaScript, PHP</li>
+		<li>Experience with: Git, Django, Node.js, JQuery, Linux/Unix, Android, </li>
+		<li>Github: https://github.com/young-lu</li>
+	</ul>
+</div>
+
+<a href="{% url 'post_list' %}">back</a>
 
 {% endblock  %}

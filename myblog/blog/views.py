@@ -4,12 +4,13 @@ from datetime import datetime
 from .models import Post
 from .forms import PostForm
 
-# Create your views here.
+# try adding generic.ListView to this and def_getqueryset
 def post_list(request) :
 	posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
 	posts = posts[::-1]
+	post_count = Post.objects.count()
 	date = datetime.now()
-	return render(request, 'blog/post_list.html', {'posts': posts, 'date': date})
+	return render(request, 'blog/post_list.html', {'posts': posts, 'date': date, 'post_count': post_count})
 
 def post_detail(request, pk) :
 	post = get_object_or_404(Post, pk=pk)
@@ -33,3 +34,8 @@ def post_new(request) :
 	else:
 		form = PostForm()
 	return render(request, 'blog/post_edit.html', {'form': form})
+
+def cv(request) :
+	date = datetime.now()
+	return render(request, 'blog/cv.html', { 'date': date})
+

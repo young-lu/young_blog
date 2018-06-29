@@ -16,24 +16,30 @@
     </head>
 <body>
     <div id = "header">
-        <h1>young blog</h1>
+        <h1>Connor Young Lu</h1>
         {% if user.is_authenticated %}
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
         {% endif %}
         <h5 style='float:right'>Today's Date: {{ date.month }}/{{ date.day }}/{{ date.year}}</h5>
     </div>
     <div class="content container">
-        <div >
             <div id="body">
             {% block content %}
             {% endblock %}
             </div>
+
+        <div class="description">
+            <p>
+            This is a simple blog that I have hastily made so that I can (1) showoff anything I happen to accomplish, (2) provide links to my social media, and (3) motivate myself to work more with the prospect of writing a blog post about it. It is still being developed, and I may drastically change it in the near future.
+            </p>
         </div>
 
         <div id = 'sidenav' >
             <a href="https://twitter.com/R2DLu" ><img class="logo grow" src="../../static/images/Twitter.png"/></a>
             <a href="https://www.facebook.com/connor.lu.1" ><img class="logo grow" src="../../static/images/FB.png"/></a>
             <a href="https://github.com/young-lu" ><img class="logo grow" src="../../static/images/Octocat.png"/></a>
+            <a href="https://www.linkedin.com/in/connor-lu-6b217014b/" ><img class="LinkedIn grow" src="../../static/images/Logo-2CRev-128px-TM.png"/></a>
+            <a href="{% url 'cv' %}"><img class="LinkedIn grow" src="../../static/images/CV.png"/></a>
         </div>
     </div>
 </body>

@@ -1,9 +1,10 @@
 {% extends 'blog/base.html' %}
 {% block content %}
+	<p>Number of posts: {{ post_count }}</p>
   	{% for post in posts %}
     <div class = "lead">
         <p>published: {{ post.published_date.month }}/{{ post.published_date.day }}/{{ post.published_date.year }}</p>
-        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+        <h1><a href="{% url 'post_detail' pk=post.pk %}" class="post">{{ post.title }}</a></h1>
         <!-- <p>{{ post.text|linebreaksbr }}</p> -->
     </div>
 	{% endfor %}
