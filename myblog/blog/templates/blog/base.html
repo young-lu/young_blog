@@ -17,9 +17,6 @@
 <body>
     <div id = "header">
         <h1>Connor Young Lu</h1>
-        {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-        {% endif %}
         <h5 style='float:right'>Today's Date: {{ date.month }}/{{ date.day }}/{{ date.year}}</h5>
     </div>
     <div class="content container">
